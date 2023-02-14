@@ -1,8 +1,9 @@
 package com.example.taskmanagementapp.service;
 
-import com.example.taskmanagementapp.model.Task;
 import com.example.taskmanagementapp.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.taskmanagementapp.model.Task;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,17 +21,17 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Task getTaskById(Long id) {
-        return taskRepository.findById(id).orElse(null);
+        return taskRepository.findById(id);
     }
 
     @Override
     public Task createTask(Task task) {
-        return taskRepository.save(task);
+        return taskRepository.update(task);
     }
 
     @Override
     public Task updateTask(Long id, Task task) {
-        Task existingTask = taskRepository.findById(id).orElse(null);
+        Task existingTask = taskRepository.findById(id);
         if (existingTask == null) {
             return null;
         }
@@ -38,7 +39,7 @@ public class TaskServiceImpl implements TaskService {
         existingTask.setBeginTime(task.getBeginTime());
         existingTask.setEndTime(task.getEndTime());
         existingTask.setCompleted(task.isCompleted());
-        return taskRepository.save(existingTask);
+        return taskRepository.update(existingTask);
     }
 
     @Override

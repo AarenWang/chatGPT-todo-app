@@ -21,7 +21,7 @@ public interface TaskRepository {
 
     @Update("UPDATE task SET name = #{name}, begin_time = #{beginTime}, " +
             "end_time = #{endTime}, completed = #{completed} WHERE id = #{id}")
-    void update(Task task);
+    Task update(Task task);
 
     @Delete("DELETE FROM task WHERE id = #{id}")
     void deleteById(Long id);

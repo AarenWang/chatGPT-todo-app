@@ -1,5 +1,4 @@
-import org.apache.ibatis.type.JdbcType;
-import org.apache.ibatis.type.MappedJdbcTypes;
+package com.example.taskmanagementapp.model;
 
 import java.time.LocalDateTime;
 
@@ -9,7 +8,7 @@ public class Task {
     private String name;
     private LocalDateTime beginTime;
     private LocalDateTime endTime;
-    private TaskStatus status;
+    private boolean completed;
 
     // Constructor, getters, and setters omitted for brevity
 
@@ -20,12 +19,11 @@ public class Task {
                 ", name='" + name + '\'' +
                 ", beginTime=" + beginTime +
                 ", endTime=" + endTime +
-                ", status=" + status +
+                ", completed=" + completed +
                 '}';
     }
 
     // MyBatis annotations for mapping Task to database table
-    @MappedJdbcTypes(JdbcType.BIGINT)
     public Long getId() {
         return id;
     }
@@ -34,7 +32,6 @@ public class Task {
         this.id = id;
     }
 
-    @MappedJdbcTypes(JdbcType.VARCHAR)
     public String getName() {
         return name;
     }
@@ -43,7 +40,6 @@ public class Task {
         this.name = name;
     }
 
-    @MappedJdbcTypes(JdbcType.TIMESTAMP)
     public LocalDateTime getBeginTime() {
         return beginTime;
     }
@@ -52,7 +48,6 @@ public class Task {
         this.beginTime = beginTime;
     }
 
-    @MappedJdbcTypes(JdbcType.TIMESTAMP)
     public LocalDateTime getEndTime() {
         return endTime;
     }
@@ -61,12 +56,12 @@ public class Task {
         this.endTime = endTime;
     }
 
-    @MappedJdbcTypes(JdbcType.VARCHAR)
-    public TaskStatus getStatus() {
-        return status;
+
+    public boolean isCompleted() {
+        return completed;
     }
 
-    public void setStatus(TaskStatus status) {
-        this.status = status;
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 }
