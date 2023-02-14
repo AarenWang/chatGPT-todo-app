@@ -2,6 +2,7 @@
   <li>
     <input type="checkbox" v-model="completed" @change="updateTodo" />
     {{ todo.title }}
+    <p :class="{ 'todo-text--completed': completed }">{{ todo.title }}</p>
     <button @click="deleteTodo">Delete</button>
   </li>
 </template>

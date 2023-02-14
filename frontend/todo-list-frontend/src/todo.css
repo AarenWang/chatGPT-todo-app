@@ -1,0 +1,79 @@
+/* Style for the todo app */
+.todo-app {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Style for the todo list */
+.todo-list {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Style for the todo item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-item.completed {
+  background-color: #e6e6e6;
+  text-decoration: line-through;
+}
+
+/* Style for the todo checkbox */
+.todo-checkbox {
+  margin-right: 10px;
+}
+
+/* Style for the todo text */
+.todo-text {
+  flex: 1;
+}
+
+/* Style for the input field */
+.todo-input {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the button */
+.todo-button {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Style for the button when disabled */
+.todo-button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Style for the error message */
+.error-message {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 5px;
+}

@@ -3,8 +3,11 @@
     <h1>Todo List</h1>
     <ul>
       <li v-for="todo in todos" :key="todo.id">
+        <input type="checkbox" v-model="todo.completed" @change="updateTodo(todo)" />
+        <!-- {{ todo.title }} -->
         {{ todo.title }}
         <button @click="deleteTodo(todo.id)">Delete</button>
+    
       </li>
     </ul>
     <form @submit.prevent="addTodo">
@@ -32,6 +35,19 @@ export default {
       TodoService.getTodos()
         .then(response => {
           this.todos = response.data;
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    },
+    updateTodo(todo) {
+      TodoService.updateTodo({
+        id: todo.id,
+        title: todo.title,
+        completed: todo.completed
+      })
+        .then(() => {
+          // Do something after updating the todo
         })
         .catch(error => {
           console.error(error);
