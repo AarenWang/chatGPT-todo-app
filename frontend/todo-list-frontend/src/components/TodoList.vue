@@ -50,4 +50,8 @@ export default {
         });
     },
     deleteTodo(id) {
-      TodoService.deleteTodo(id
+      TodoService.deleteTodo(id)
+    }
+  }
+}
+</script>
