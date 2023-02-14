@@ -1,12 +1,27 @@
-# chatgpt-todo-app
+## chatgpt-todo-app
 using chatGPT generate a simple TODO List APP Sourcecode || 用chatGPT生成一个简单的TODO List APP  
 
 让chatGPT为程序员服务，辅助程序员开发应用程序，通过引导chatGPT一步一步完成一个TODO List(任务清单) APP开发
 Let ChatGPT serve developers and assist them in developing applications by guiding them step-by-step to complete the development of a TODO List application
 
-
+## 运行工程方法
+后端
 ```
-frontend/
+mvn clean pacakge  # 编译
+mvn spring-boot:run  # 运行spring boot 应用,端口8080
+```
+
+前端
+```
+npm install
+npm run serve  # 端口8081，浏览器访问 http://localhost:8081/  
+```
+
+##  代码结构
+
+前端
+```
+todo-list-frontend/
 ├── public/
 │   ├── index.html
 │   └── ...
@@ -28,7 +43,33 @@ frontend/
 └── README.md
 ```
 
-交互过程
+后端
+```
+├── pom.xml
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── example
+│   │   │           └── todo
+│   │   │               ├── TodoListApplication.java
+│   │   │               ├── controller
+│   │   │               │   └── TodoItemController.java
+│   │   │               ├── model
+│   │   │               │   └── TodoItem.java
+│   │   │               └── repository
+│   │   │                   └── TodoItemRepository.java
+│   │   └── resources
+│   └── test
+│       └── java
+│           └── com
+│               └── example
+│                   └── todo
+│                       └── controller
+│                           └── TodoItemControllerTest.java
+```
+
+## 交互过程
 
 Q:  Use vue and SpringBoot create an TODO List app  
 A: Creating a TODO list app with Vue and SpringBoot involves building a frontend using Vue for user interface and a backend using SpringBoot for handling data and logic.
@@ -65,3 +106,6 @@ Run both the frontend and backend servers.
 - Open the app in a web browser and test adding, deleting, and updating TODO list items.
 - Verify that the changes are persisted in the backend database.
 There are many resources available online to help you build a TODO list app with Vue and SpringBoot. I recommend starting with the official documentation for Vue and SpringBoot, as well as some tutorials and examples on sites like Medium and GitHub.
+
+后续生成每个文件过程 请看图片
+![](interview-with-chatGPT.png)
