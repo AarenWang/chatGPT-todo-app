@@ -12,6 +12,8 @@ public class TodoItem {
     private String description;
     private boolean completed;
 
+    public TodoItem(){}
+
     public TodoItem(Long id, String name, String description, boolean completed) {
         this.id = id;
         this.name = name;
