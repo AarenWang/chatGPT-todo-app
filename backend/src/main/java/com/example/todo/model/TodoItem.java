@@ -8,15 +8,15 @@ public class TodoItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String title;
     private String description;
     private boolean completed;
 
     public TodoItem(){}
 
-    public TodoItem(Long id, String name, String description, boolean completed) {
+    public TodoItem(Long id, String title, String description, boolean completed) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.description = description;
         this.completed = completed;
     }
@@ -29,12 +29,12 @@ public class TodoItem {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String name) {
+        this.title = name;
     }
 
     public String getDescription() {

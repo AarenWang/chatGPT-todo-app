@@ -44,10 +44,10 @@ public class TodoItemControllerTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType("application/json"))
             .andExpect(jsonPath("$[0].id").value(1))
-            .andExpect(jsonPath("$[0].name").value("Todo 1"))
+            .andExpect(jsonPath("$[0].title").value("Todo 1"))
             .andExpect(jsonPath("$[0].completed").value(false))
             .andExpect(jsonPath("$[1].id").value(2))
-            .andExpect(jsonPath("$[1].name").value("Todo 2"))
+            .andExpect(jsonPath("$[1].title").value("Todo 2"))
             .andExpect(jsonPath("$[1].completed").value(false))
             .andDo(print())
             .andReturn();
