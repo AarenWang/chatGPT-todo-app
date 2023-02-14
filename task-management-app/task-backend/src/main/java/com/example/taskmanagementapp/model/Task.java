@@ -1,35 +1,72 @@
-package com.example.taskmanagementapp.model;
+import org.apache.ibatis.type.JdbcType;
+import org.apache.ibatis.type.MappedJdbcTypes;
 
-import lombok.Data;
-
-import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Data
-@Entity
-@Table(name = "tasks")
 public class Task {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
     private String name;
-
-    @Column(nullable = false)
     private LocalDateTime beginTime;
-
-    @Column(nullable = false)
     private LocalDateTime endTime;
+    private TaskStatus status;
 
-    private String status;
+    // Constructor, getters, and setters omitted for brevity
 
-    public boolean isCompleted() {
-        return "completed".equals(status);
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", beginTime=" + beginTime +
+                ", endTime=" + endTime +
+                ", status=" + status +
+                '}';
     }
 
-    public void setCompleted(boolean completed) {
-        status = completed ? "completed" : null;
+    // MyBatis annotations for mapping Task to database table
+    @MappedJdbcTypes(JdbcType.BIGINT)
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @MappedJdbcTypes(JdbcType.VARCHAR)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @MappedJdbcTypes(JdbcType.TIMESTAMP)
+    public LocalDateTime getBeginTime() {
+        return beginTime;
+    }
+
+    public void setBeginTime(LocalDateTime beginTime) {
+        this.beginTime = beginTime;
+    }
+
+    @MappedJdbcTypes(JdbcType.TIMESTAMP)
+    public LocalDateTime getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalDateTime endTime) {
+        this.endTime = endTime;
+    }
+
+    @MappedJdbcTypes(JdbcType.VARCHAR)
+    public TaskStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(TaskStatus status) {
+        this.status = status;
     }
 }
