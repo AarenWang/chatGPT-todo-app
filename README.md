@@ -4,6 +4,9 @@ using chatGPT generate a simple TODO List APP Sourcecode || 用chatGPT生成一�
 让chatGPT为程序员服务，辅助程序员开发应用程序，通过引导chatGPT一步一步完成一个TODO List(任务清单) APP开发
 Let ChatGPT serve developers and assist them in developing applications by guiding them step-by-step to complete the development of a TODO List application
 
+## 体验总结
+chatGPT能
+
 ## 运行工程方法
 后端
 ```
