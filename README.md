@@ -5,7 +5,23 @@ using chatGPT generate a simple TODO List APP Sourcecode || 用chatGPT生成一�
 Let ChatGPT serve developers and assist them in developing applications by guiding them step-by-step to complete the development of a TODO List application
 
 ## 体验总结
-chatGPT能
+各项能力打分：
+1. 明白整个Demo项目创建过程，给出清晰的思路，打分9分(10分满分,下同)
+2. 知道前端Vue和后端SpringBoot更细一步的技术框架，比如后端的打包maven工具配置，前端npm、eslint等工具配置, 打分8分
+3. 项目代码文件目录结构基本正确，按照指令能分别输出前端和后端代码  打8分
+4. 前后端代码打协调性，按照我设定功能，前后端代码的URL、请求字段等约定基本匹配 打7分
+5. 代码可用性， 不管是生成前端代码还是后端，80%可用吧，剩下20%，自己要做不少修改，打6分，勉强给他及格，估计继续改进
+6. 技术理解力，比如后端数据库访问开始用Spring Data Jpa，我让他用MyBatis重新生成下，重新生成用MyBatis编写的代码， 打7分。
+7. 业务理解能力，比如我告诉它任务管理需要哪些输入，生成前后端代码有对应字段了。  打7分。
+8. 问题解决能力，比如碰到一个报错，把错误信息放进去，如果运气够好能给出正确的修改方法，  打7分
+
+**总结**
+- 能代替人工，用常见的技术栈和应用代替生成一些场景的样板案例代码，
+- 能给初学者一个明确的设计思路，比如写个Demo拆解成几步，每一步都干啥
+- 要改成能跑的Demo，自己还是需要懂点对应技术、花时间修改调整
+- 和低代码平台结合，可能会是一个很不错创业方向，有了chatGPT，低代码平台从固定模板到一个“有灵魂”AI编程机器人的转变 
+
+
 
 ## 运行工程方法
 后端
