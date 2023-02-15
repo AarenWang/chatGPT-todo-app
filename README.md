@@ -1,8 +1,14 @@
 ## chatgpt-todo-app
-using chatGPT generate a simple TODO List APP Sourcecode || 用chatGPT生成一个简单的TODO List APP  
+用chatGPT生成一个简单的TODO List APP (using chatGPT generate a simple TODO List APP Sourcecode ) 
 
 让chatGPT为程序员服务，辅助程序员开发应用程序，通过引导chatGPT一步一步完成一个TODO List(任务清单) APP开发
 Let ChatGPT serve developers and assist them in developing applications by guiding them step-by-step to complete the development of a TODO List application
+
+整个过程大概是这样
+ 1. 先告诉chatGPT我打算写一个任务管理应用，用的前后端技术栈分别是Vue3和SpringBoot，chatGPT给出开发步骤
+ 2. 然后让chatGPT分别打印后端和前段代码
+ 3. 将代码放到本地工程里，有报错话，让chatGPT再次打印
+ 4. 剩下问题自己修改
 
 ## 体验总结
 各项能力打分：
